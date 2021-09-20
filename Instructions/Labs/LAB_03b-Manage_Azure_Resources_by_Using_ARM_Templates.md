@@ -54,7 +54,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. ダウンロードしたファイルの内容をラボ コンピューターの **Downloads** フォルダーに抽出します。
 
-    >**注**: これらのファイルは、**\\Allfiles\\Labs\\\03\az104-03b-md-template.json** および **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json** でも入手可能です。
+    >**注**: これらのファイルは、**\\Allfiles\\Labs\\03\\az104-03b-md-template.json** および **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json** でも入手可能です。
     
 1. すべての**ファイル エクスプローラー**ウィンドウを閉じます。
 
@@ -77,9 +77,6 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
    "sourceUri": {
        "type": "String"
    },
-   "sourceImageVersionId": {
-    "type": "String"
-   },
    "osType": {
        "type": "String"
    },
@@ -93,7 +90,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
    ```
 
    ```json
-   "osType": "「parameters('osType')」",
+   "osType": "[parameters('osType')]",
    ```
 
     >**注**: これらのパラメーターは、現在のデプロイには適用されないので削除されます。特に、sourceResourceId、sourceUri、osType および hyperVGeneration パラメーターは、既存の VHD ファイルから Azure ディスクを作成するために適用できます。

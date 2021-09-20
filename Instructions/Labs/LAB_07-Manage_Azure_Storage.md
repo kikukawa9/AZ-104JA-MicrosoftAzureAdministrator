@@ -47,7 +47,7 @@ lab:
 
 1. Cloud Shell ウィンドウのツールバーで、**「ファイルのアップロード/ダウンロード」** アイコンをクリックし、ドロップダウン メニューで **「アップロード」** を選択して、ファイル **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** および **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** を Cloud Shell ホーム ディレクトリにアップロードします。
 
-1. 「Cloud Shell」 ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します (`「Azure_region」` プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
+1. 「Cloud Shell」 ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します (`[Azure_region]` プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
 
     >**注**: Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します
 
@@ -224,7 +224,6 @@ lab:
     | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-07-share** |
-    | クォータ | **1024** |
 
 1. 新しく作成したファイル共有をクリックし、**「接続」** をクリックします。
 
@@ -278,7 +277,7 @@ lab:
 
 1. **Bash** や **PowerShell** のどちらかを選択するためのプロンプトが表示されたら、**PowerShell** を選択します。
 
-1. Cloud Shell ウィンドウから以下を実行して、ストレージアカウントの **az104-07-container** コンテナーから LICENSE BLOB のダウンロードを試みます (`「blob SAS URL」` プレースホルダーを前のタスクで生成した BLOB SAS URL に置き換えます)。
+1. Cloud Shell ウィンドウから以下を実行して、ストレージアカウントの **az104-07-container** コンテナーから LICENSE BLOB のダウンロードを試みます (`[blob SAS URL]` プレースホルダーを前のタスクで生成した BLOB SAS URL に置き換えます)。
 
    ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
