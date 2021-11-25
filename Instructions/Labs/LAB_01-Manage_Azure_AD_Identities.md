@@ -34,7 +34,7 @@ Contoso のユーザーが Azure AD を使用して認証できるようにす�
 
 このタスクでは、Azure AD ユーザーを作成および構成します。
 
->**注**: 以前にこの Azure AD テナントで Azure AD Premium の試用版ライセンスを使用している場合は、新しい Azure AD テナントが必要になるか、新しい Azure AD テナントで、タスク 3 の後にタスク 2 を実行する必要があります。
+>**注**: 以前にこの Azure AD テナントで Azure AD Premium の試用版ライセンスを使用している場合は、新しい Azure AD テナントが必要になり、新しい Azure AD テナントで、タスク 3 の後にタスク 2 を実行する必要があります。
 
 1. [Azure portal](https://portal.azure.com) にサインインします。
 
