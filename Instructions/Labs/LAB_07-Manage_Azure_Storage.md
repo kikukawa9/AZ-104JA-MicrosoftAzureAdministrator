@@ -47,20 +47,23 @@ lab:
 
 1. Cloud Shell ウィンドウのツールバーで、「**ファイルのアップロード/ダウンロード**」 アイコンをクリックし、ドロップダウン メニューで 「**アップロード**」 を選択して、ファイル **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** および **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** を Cloud Shell ホーム ディレクトリにアップロードします。
 
-1. 「Cloud Shell」 ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します (`[Azure_region]` プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
+1. 「Cloud Shell」 ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します ('[Azure_region]' プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
 
     >**注**: Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します
     > **注**: 以下の各コマンドは個別に入力する必要があります
 
-   ```powershell
-   $location = '[Azure_region]'
+    ```powershell
+    $location = '[Azure_region]'
+    ```
   
-   ```powershell
-   $rgName = 'az104-07-rg0'
- 
-   ```powershell
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
+    ```powershell
+     $rgName = 'az104-07-rg0'
+    ```
+
+    ```powershell
+    New-AzResourceGroup -Name $rgName -Location $location
+    ```
+    
 1. 「Cloud Shell」 ペインから次のコマンドを実行し、アップロードされたテンプレートとパラメーター ファイルを使用して、仮想マシンをデプロイします。
 
    ```powershell
