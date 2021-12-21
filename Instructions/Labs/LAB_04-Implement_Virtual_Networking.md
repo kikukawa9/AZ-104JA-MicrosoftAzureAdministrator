@@ -111,6 +111,13 @@ Azure バーチャル ネットワークの機能について学習します。�
 
     >**注**: 次のタスクに進む前に、デプロイが完了するまで待機します。これにはおよそ 2 分かかります。
 
+    >**注**: リージョンで VM サイズが利用できないというエラーが表示された場合は、次の手順に従います。
+    > 1. CloudShell の `{}` ボタンをクックして、左側のサイド バーから、**az104-04-vms-loop-parameters.json** を選択して、 `vmSize` パラメーターの値をメモします。
+    > 1. 'az104-04-rg1' リソース グループがデプロイされている場所を確認します。CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、取得できます。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
+    > 1. `vmSize` パラメーターの値を実行したコマンドにより返された値に置き換えます。
+    > 1. `New-AzResourceGroupDeployment` コマンドをもう一度実行して、テンプレートを再デプロイします。上ボタンを数回押すと、最後に実行したコマンドが表示されます。
+
 1. 「Cloud Shell」 ペインを閉じます。
 
 #### タスク 3: Azure VM のプライベート IP アドレスとパブリック IP アドレスを構成する
