@@ -205,6 +205,8 @@ lab:
 
 1. **「保存」** をクリックします。
 
+    > **注**: 'microsoft.insights' リソース プロバイダが登録されていないことに関するエラーが発生した場合は、CloudShell で、`az provider register --namespace 'Microsoft.Insights'` を実行して、自動スケール ルールの保存を再試行します。
+
 1. Azure portal の右上にあるアイコンをクリックして **Azure Cloud Shell** を開きます。
 
 1. **Bash** や **PowerShell** のどちらかを選択するためのプロンプトが表示されたら、**PowerShell** を選択します。

@@ -51,17 +51,18 @@ lab:
 
 1. 「Cloud Shell」 ペインから次を実行して、ラボ環境をホストする最初のリソース グループを作成します ('[Azure_region]' プレースホルダーを Azure Virtual Machines をデプロイする Azure リージョンの名前に置き換えます)("(Get-AzLocation).Location" コマンドレットを使用して、リージョン一覧を取得できます)。
 
-    ```powershell (execute one command at a time)
+    ```powershell 
     $location = '[Azure_region]'
     ```
-
-    ```powershell (execute one command at a time)
+    リソース グループ名:
+    ```powershell
     $rgName = 'az104-06-rg1'
     ```
-
-    ```powershell (execute one command at a time)
+    最後に、ご利用のサブスクリプションにリソース グループを作成します。
+    ```powershell
     New-AzResourceGroup -Name $rgName -Location $location
     ```
+
 
 1. 「Cloud Shell」 ウィンドウで、次のコマンドを実行して 3 つのバーチャル ネットワークを作成し、アップロードしたテンプレートとパラメーター ファイルを使用して、4 つの Azure VM を作成します。
 
